@@ -1,30 +1,23 @@
 # Shakespeare-Text-Generator
 
-**Shakespeare-Text-Generator** is a text generation project using LSTM and n-grams to generate poetic text based on Shakespearean sonnets. This project leverages deep learning techniques to predict and generate the next words in a sequence, creating new lines of sonnets.
-
 ## Overview
 
-This project uses a dataset of Shakespearean sonnets to train an LSTM-based neural network model for text generation. The model is trained to predict the next word in a sequence and can generate extended text based on an initial seed phrase.
+The **Shakespeare-Text-Generator** project is designed to generate text in the style of Shakespearean sonnets using a neural network model. By leveraging the power of Long Short-Term Memory (LSTM) networks, this project can generate coherent and stylistically similar text based on an initial seed input. The model is built using TensorFlow and Keras and includes components for data preprocessing, model training, and text generation.
 
-## Features
+## Key Components
 
-- **Text Generation**: Generate poetic text based on the seed text using a trained LSTM model.
-- **N-Gram Sequences**: Create and use n-gram sequences for training the model.
-- **Model Training**: Train an LSTM model on the sonnet dataset and evaluate its performance.
-- **Visualization**: Plot training accuracy and loss to monitor model performance.
+1. **Data Download and Preprocessing:**
+   - **`sonnets.txt`**: Contains a dataset of Shakespearean sonnets used for training the model.
+   - Text data is processed by converting it to lowercase, tokenizing it into sequences, and creating n-gram sequences. Sequences are then padded to ensure uniform input size.
 
-## Getting Started
+2. **Model Architecture:**
+   - **Embedding Layer:** Converts integer word indices into dense vector representations.
+   - **Bidirectional LSTM Layer:** Processes the input sequences in both forward and backward directions to capture context.
+   - **Dense Layer:** Outputs a probability distribution over the vocabulary for each word position.
 
-### Prerequisites
+3. **Training:**
+   - The model is trained for 50 epochs using categorical crossentropy loss and the Adam optimizer. Training metrics such as accuracy and loss are visualized to monitor performance.
 
-Ensure you have the following Python libraries installed:
+4. **Text Generation:**
+   - Given a seed text, the model generates subsequent text by predicting the next word in the sequence iteratively until the desired length is reached.
 
-- TensorFlow
-- NumPy
-- Matplotlib
-- Google Colab (for downloading files)
-
-You can install the necessary libraries using pip:
-
-```bash
-pip install tensorflow numpy matplotlib gdown
