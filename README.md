@@ -1,6 +1,5 @@
-# Shakespeare-Text-Generator
-(This project has been done as a programing assignment of course "Natural Language Processing in Tensorflow" in Coursera website.
 ## Overview
+(This project has been done as a programing assignment of course "Natural Language Processing in Tensorflow" in Coursera website.
 
 The **Shakespeare-Text-Generator** project is designed to generate text in the style of Shakespearean sonnets using a neural network model. By leveraging the power of Long Short-Term Memory (LSTM) networks, this project can generate coherent and stylistically similar text based on an initial seed input. The model is built using TensorFlow and Keras and includes components for data preprocessing, model training, and text generation.
 
@@ -20,4 +19,12 @@ The **Shakespeare-Text-Generator** project is designed to generate text in the s
 
 4. **Text Generation:**
    - Given a seed text, the model generates subsequent text by predicting the next word in the sequence iteratively until the desired length is reached.
+
+## Files
+
+- **`Shakespeare-Text-Generator.ipynb`**: Jupyter Notebook containing the complete implementation of the text generation model.
+- **`data-preprocessing.ipynb`**: Jupyter Notebook for data preprocessing tasks, including loading and preparing the Shakespearean sonnets dataset.
+- **`readme.md`**: This file, providing an overview and details about the project.
+
+
 
